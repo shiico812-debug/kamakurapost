@@ -16,6 +16,7 @@
   --terracotta-deep: #874527;
   --terracotta-bg: #f3ddd0;
   --text: #5b6661;
+  --text-sub: #66716c; /* 補足の文字。白地で読める濃さ（旧 #8a958f は薄すぎた） */
   --border: #e2e9e5;
   --serif: "Zen Old Mincho", "Hiragino Mincho ProN", serif;
   --sans: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
@@ -40,7 +41,7 @@ img { max-width: 100%; height: auto; display: block; }
 .site-header .inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; max-width: 1120px; margin: 0 auto; }
 .brand { display: flex; flex-direction: column; text-decoration: none; color: var(--green-dark); flex-shrink: 0; }
 .brand-logo { height: 36px; width: auto; display: block; }
-.brand-tag { font-size: 12.5px; color: var(--green-soft); white-space: nowrap; }
+.brand-tag { font-size: 12.5px; color: var(--green-deep); white-space: nowrap; }
 .nav { display: flex; flex-wrap: wrap; gap: 4px 15px; }
 .nav a { color: var(--green-deep); font-size: 14px; font-weight: 700; text-decoration: none; padding: 4px 0; white-space: nowrap; }
 .nav a:hover { color: var(--coral); }
@@ -83,7 +84,8 @@ main section p { margin: 0 0 18px; font-size: 15px; }
 .feature:nth-child(3) .ico-badge { background: #9c7a2c; }
 .feature .ico-badge svg { width: 20px; height: 20px; }
 .feature h3 { font-family: var(--serif); color: var(--green-dark); font-size: 17px; font-weight: 900; margin: 0 0 6px; }
-.feature p { font-size: 13.5px; line-height: 1.7; margin: 0; color: #8a958f; }
+.feature p { font-size: 15.5px; line-height: 1.75; margin: 0; color: var(--text); word-break: normal; }
+.feature p .br-sm { display: none; }
 
 /* セクション区切り（波モチーフ） */
 .divider { display: flex; align-items: center; gap: 10px; margin: 44px 0 30px; }
@@ -97,8 +99,8 @@ main section p { margin: 0 0 18px; font-size: 15px; }
 .banner .banner-ico { width: 38px; height: 38px; border-radius: 9px; background: #fff; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
 .banner .banner-ico svg { width: 18px; height: 18px; }
 .banner h3 { font-family: var(--serif); font-size: 16px; font-weight: 900; margin: 0 0 6px; color: #fff; }
-.banner p { margin: 0; font-size: 12.5px; line-height: 1.65; color: rgba(255,255,255,.85); }
-.banner .banner-more { margin-top: auto; padding-top: 12px; font-size: 12px; font-weight: 700; color: var(--gold-muted); }
+.banner p { margin: 0; font-size: 14.5px; line-height: 1.7; color: #fff; word-break: normal; }
+.banner .banner-more { margin-top: auto; padding-top: 12px; font-size: 14px; font-weight: 700; color: var(--gold-muted); }
 .banner.terracotta { border-color: var(--terracotta-deep); background: var(--terracotta); }
 .banner.terracotta .banner-ico svg { stroke: var(--terracotta); }
 .banner:not(.terracotta) .banner-ico svg { stroke: var(--green-deep); }
@@ -121,7 +123,7 @@ main section p { margin: 0 0 18px; font-size: 15px; }
 .voice .avatar { width: 96px; height: 96px; border-radius: 50%; background: var(--green-deep); color: #fff; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden; border: 2px solid var(--gold-muted); }
 .voice .avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; }
 .voice blockquote { margin: 0; font-family: var(--serif); font-size: 16px; line-height: 1.85; color: var(--green-dark); text-align: center; }
-.voice cite { display: block; font-style: normal; font-size: 12px; color: #8a958f; margin-top: 8px; text-align: right; }
+.voice cite { display: block; font-style: normal; font-size: 14px; color: var(--text-sub); margin-top: 8px; text-align: right; }
 
 /* 料金テーブル */
 /* 地区カード（料金） */
@@ -133,7 +135,7 @@ main section p { margin: 0 0 18px; font-size: 15px; }
 .area-block .areas .a { white-space: nowrap; }
 .area-block .area-body { padding: 8px 20px 20px; }
 .area-block .area-body .price-table { margin: 0; }
-.area-block .area-body .note { margin: 12px 0 0; font-size: 13px; color: #8a958f; }
+.area-block .area-body .note { margin: 12px 0 0; font-size: 14.5px; color: var(--text-sub); }
 
 /* 注意書きボックス */
 .note-box { max-width: 680px; margin: 0 auto; border: 2px solid var(--gold-muted); border-radius: 14px; background: #fff; box-shadow: 0 4px 0 var(--gold-muted-bg); padding: 20px 24px; }
@@ -159,7 +161,7 @@ main section p { margin: 0 0 18px; font-size: 15px; }
 /* お知らせ */
 .news-list { list-style: none; padding: 0; margin: 8px auto; max-width: 700px; }
 .news-list li { display: flex; gap: 16px; border-bottom: 1px solid var(--border); padding: 16px 0; font-size: 16px; }
-.news-list time { color: var(--green-soft); white-space: nowrap; font-weight: 700; flex-shrink: 0; }
+.news-list time { color: var(--green-deep); white-space: nowrap; font-weight: 700; flex-shrink: 0; }
 .news-list li span { flex: 1; min-width: 0; word-break: keep-all; overflow-wrap: break-word; }
 
 @media (max-width: 560px) {
@@ -195,7 +197,7 @@ main section p { margin: 0 0 18px; font-size: 15px; }
 .btn:hover, .btn:focus { background: var(--coral-hover); }
 
 /* フッター */
-.site-footer { border-top: 1px solid var(--border); margin-top: 44px; padding: 30px 0; text-align: center; font-size: 14px; color: #8a958f; background: #fff; }
+.site-footer { border-top: 1px solid var(--border); margin-top: 44px; padding: 30px 0; text-align: center; font-size: 14px; color: var(--text-sub); background: #fff; }
 .site-footer .nav { justify-content: center; margin-bottom: 14px; }
 
 /* スマホでだけ改行させる */
@@ -226,4 +228,15 @@ main section p { margin: 0 0 18px; font-size: 15px; }
   .site-header .nav a { padding: 12px 0; border-bottom: 1px solid var(--border); }
   .site-footer .nav { gap: 2px 18px; padding: 0 12px; }
   .site-footer .nav a { padding: 6px 2px; }
+}
+
+/* スマホだけ：画面の下に「電話する／フォームで問い合わせる」をいつも出す（2026-11-24）
+   contact.html と recruit.html には置かない（そのページ自体がフォームなので） */
+.contact-bar { display: none; }
+@media (max-width: 700px) {
+  body.has-contact-bar { padding-bottom: 68px; }
+  .contact-bar { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; background: var(--green-dark); padding: 8px; padding-bottom: max(8px, env(safe-area-inset-bottom)); }
+  .contact-bar a { display: flex; align-items: center; justify-content: center; min-height: 48px; border-radius: 8px; font-weight: 700; font-size: 15.5px; text-decoration: none; -webkit-tap-highlight-color: transparent; }
+  .contact-bar .cb-call { background: var(--cream); color: var(--green-dark); }
+  .contact-bar .cb-form { background: var(--terracotta); color: #fff; }
 }
